@@ -1,0 +1,44 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "[CMD] Run make migrations",
+            "type": "python",
+            "envFile": "${workspaceFolder}/.env",
+            "cwd": "${workspaceFolder}/src/",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/manage.py",
+            "args": [
+                "makemigrations"
+            ],
+            "django": true
+        },
+        {
+            "name": "[CMD] Run migrate",
+            "type": "python",
+            "envFile": "${workspaceFolder}/.env",
+            "cwd": "${workspaceFolder}/src/",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/manage.py",
+            "args": [
+                "migrate"
+            ],
+            "django": true
+        },
+        {
+            "name": "[WEB] Start dev server",
+            "type": "python",
+            "envFile": "${workspaceFolder}/.env",
+            "cwd": "${workspaceFolder}/src/",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/manage.py",
+            "args": [
+                "runserver"
+            ],
+            "django": true
+        }
+    ]
+}

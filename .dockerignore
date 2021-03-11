@@ -1,0 +1,6 @@
+.blackbox/
+.github/
+.vscode/
+data/
+infrastructure/
+venv/

@@ -1,0 +1,11 @@
+<p>Pushing auth credentials</p>
+<input type="hidden" id="c" value="{{code}}">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/combine/npm/broadcastchannel-polyfill@1.0.1,npm/jquery@3.6.0"></script>
+<script type="text/javascript">
+    $(function () {
+        const broadcastChannelId = 'channel-jklbdNXriES1UTTkMK4lAg';
+        const channel = new BroadcastChannel(broadcastChannelId);
+        channel.postMessage({ type: 'ApplyCode', payload: $('#c').val() });
+        setTimeout(function () { window.close(); }, 500);
+    });
+</script>
